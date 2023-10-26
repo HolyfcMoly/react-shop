@@ -31,6 +31,119 @@ nav {
   gap: 20px;
 }
 
+.card-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-wrap: nowrap;
+}
+
 .card-action .price {
   font-size: 1.8rem;
+}
+
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  padding: 0.5rem;
+}
+
+@media (min-width: 767px) {
+    .cart {
+      top: 5rem;  
+      bottom: unset;
+    }
+}
+
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 50rem;
+  max-width: 95%;
+  animation: show 0.5s ease-in-out;
+}
+
+.collection-item-basket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.item-delete {
+  cursor: pointer;
+}
+
+.basket-close {
+  position: absolute;
+  top: 0.5rem;  
+  right: 0.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+@keyframes show {
+  from {
+    top: 30%;
+    opacity: 0;
+  }
+  
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+.item-counter {
+  position: absolute;
+  right: 30%;
+  user-select: none;
+}
+
+.item-counter i {
+  cursor: pointer;
+}
+
+.item-counter span {
+  padding: 0 0.8rem;
+}
+
+.basket-quantity {
+  vertical-align: middle;
+
+}
+
+.toast {
+  position: fixed;
+  top: 8rem;
+  right: 2rem;
+  padding: 10px;
+  width: 150px;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: rgb(2, 2, 2);
+  background-color: #c970d894;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.load-more-btn {
+  display: flex;
+  margin: 0 auto;
 }

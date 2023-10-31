@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { ShopContext } from "../context";
+
 function GoodsItem(props) {
     const {
         mainId,
@@ -5,8 +8,9 @@ function GoodsItem(props) {
         displayDescription,
         price,
         displayAssets,
-        addToBasket = Function.prototype,
     } = props;
+
+    const {addToBasket} = useContext(ShopContext)
 
     const fullImg = displayAssets[1]
         ? displayAssets[1].full_background

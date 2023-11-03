@@ -1,3 +1,3 @@
-# React-shop project with Context and Reducer state
+# React-shop project 
 
-## Original without reducer [DEMO](https://github.com/HolyfcMoly/react-shop/)
+##  [DEMO](https://github.com/HolyfcMoly/react-shop/)
